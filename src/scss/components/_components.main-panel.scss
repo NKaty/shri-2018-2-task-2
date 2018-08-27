@@ -1,0 +1,59 @@
+///*------------------------------------*\
+//  #MAIN-PANEL
+//\*------------------------------------*/
+
+.c-main-panel {
+  //исправление поведения в Firefox - из-за css grid ломается поведение flex с вертикальным скролом
+  height: 331px;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr) auto;
+  justify-content: space-between;
+  padding: $global-spacing-unit $global-spacing-unit-middle 0 $global-spacing-unit-middle;
+  border-radius: $global-radius;
+  background-image: url(../assets/bg@1x.png);
+  background-image: image-set(
+                  url(../assets/bg@1x.png) 1x,
+                  url(../assets/bg@2x.png) 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq($until: mobile) {
+    height: auto;
+    background-position: 40% 30%;
+    background-size: auto;
+    padding: $global-spacing-unit 0 $global-spacing-unit $global-spacing-unit;
+  }
+}
+
+.c-main-panel__status-info {
+  grid-column: 1 / 2;
+
+  & > p:first-child {
+    @include font-size(27px);
+    @include font-weight(bold);
+    @include mq($until: mobile) {
+      @include font-size(18px, 1.5);
+    }
+  }
+
+  & > p:nth-child(2) {
+    margin-bottom: $global-spacing-unit-middle;
+    @include mq($until: mobile) {
+      margin-bottom: 12px;
+    }
+  }
+
+  @include mq($until: mobile) {
+    grid-column: 1 / -1;
+    @include font-size(12px, 1.4);
+    margin-bottom: 17px;
+  }
+}
+
+.c-main-panel__scheduled-scripts-list {
+  grid-column: 2 / 3;
+  @include mq($until: mobile) {
+    grid-column: 1 / -1;
+  }
+}

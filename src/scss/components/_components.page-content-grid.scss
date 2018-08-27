@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  #PAGE-CONTENT-GRID
+\*------------------------------------*/
+
+.c-page-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $global-spacing-unit-large $global-spacing-unit-middle;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.c-page-content-grid__main {
+  grid-column: 1 / 2;
+  @include mq($until: mobile) {
+    grid-column: 1 / -1;
+  }
+}
+
+.c-page-content-grid__scripts {
+  grid-column: 2 / -1;
+  @include mq($until: mobile) {
+    grid-column: 1 / -1;
+  }
+}
+
+.c-page-content-grid__devices {
+  grid-column: 1 / -1;
+}

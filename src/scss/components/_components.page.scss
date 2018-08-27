@@ -1,0 +1,13 @@
+///*------------------------------------*\
+//  #PAGE
+//\*------------------------------------*/
+
+$logo-height: 27px;
+
+.c-page {
+  @include mq($until: mobile) {
+    &.has-fixed-page-head {
+      padding-top: $logo-height + $global-spacing-unit + $global-spacing-unit;
+    }
+  }
+}

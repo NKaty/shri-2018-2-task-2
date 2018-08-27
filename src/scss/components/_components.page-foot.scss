@@ -1,0 +1,21 @@
+///*----------------------------------*\
+//  #PAGE-FOOT
+//\*----------------------------------*/
+
+.c-page-foot {
+  display: flex;
+  justify-content: space-between;
+  padding-top: $global-spacing-unit;
+  padding-bottom: $global-spacing-unit;
+  @include font-size(12px, 2);
+  color: $color-page-foot;
+  @include mq($until: mobile) {
+    justify-content: center;
+  }
+}
+
+.c-page-foot__nav {
+  @include mq($until: mobile) {
+    display: none;
+  }
+}

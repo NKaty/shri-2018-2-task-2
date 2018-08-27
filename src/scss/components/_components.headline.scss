@@ -1,0 +1,35 @@
+///*------------------------------------*\
+//  #HEADLINE
+//\*------------------------------------*/
+
+.c-headline {
+  margin-bottom: $global-spacing-unit;
+}
+
+.c-headline--pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq($until: mobile) {
+    display: block;
+  }
+}
+
+.c-headline__head-part {
+  .c-headline--filter & {
+    display: flex;
+    align-items: center;
+    @include mq($until: mobile) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.c-headline__pagination {
+  .c-headline--pagination & {
+    @include mq($until: mobile) {
+      display: none;
+    }
+  }
+}
+

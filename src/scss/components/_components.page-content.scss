@@ -1,0 +1,9 @@
+///*------------------------------------*\
+//  #PAGE-CONTENT
+//\*------------------------------------*/
+
+.c-page-content__main-headline {
+  @include mq($until: mobile) {
+    display: none;
+  }
+}

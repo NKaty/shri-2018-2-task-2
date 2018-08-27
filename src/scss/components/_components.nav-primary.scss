@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  #NAV-PRIMARY
+\*------------------------------------*/
+
+.c-nav-primary__menu {
+  @include mq($until: mobile) {
+    background-color: $color-page-head-menu-background;
+    border-radius: $global-radius;
+    padding: $global-spacing-unit-small 0;
+    &:before {
+      content: '';
+      width: 0;
+      position: absolute;
+      top: -8px;
+      right: 18px;
+      border: 4px solid transparent;
+      border-bottom: 4px solid $color-page-head-menu-background;
+    }
+  }
+}
+
+.c-nav-primary__link {
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  opacity: 0.6;
+  @include hocus() {
+    opacity: 0.8;
+  }
+  @include mq($until: mobile) {
+    display: block;
+    padding-left: $global-spacing-unit-huge;
+    padding-right: $global-spacing-unit-huge;
+  }
+  .c-nav-primary__item.is-active & {
+    cursor: default;
+    opacity: 1;
+  }
+}

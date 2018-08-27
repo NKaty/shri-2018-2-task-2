@@ -8,7 +8,7 @@
     </defs>
     <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="v1-3-1-home-dashboard-footer" transform="translate(-1283.000000, -608.000000)">
-            <rect fill="#F8F8F8" x="0" y="0" width="1366" height="829"></rect>
+            <rect fill="#none" x="0" y="0" width="1366" height="829"></rect>
             <g id="favorites" transform="translate(40.000000, 595.000000)" opacity="1">
                 <g id="Icons-/-Arrow-Right-/-M-Copy" transform="translate(1247.500000, 20.000000) scale(-1, 1) translate(-1247.500000, -20.000000) translate(1240.000000, 12.000000)">
                     <g id="Direct-/-Icons-/-Arrow-Right-/-M">
@@ -16,7 +16,6 @@
                         <mask id="mask-2" fill="white">
                             <use xlink:href="#path-1"></use>
                         </mask>
-                        <use id="icon_arrow-right_m" fill="#000000" fill-rule="nonzero" transform="translate(7.500000, 7.863474) scale(-1, 1) rotate(-270.000000) translate(-7.500000, -7.863474) " xlink:href="#path-1"></use>
                         <g id="Color-/-Black" mask="url(#mask-2)" fill="#333333">
                             <g transform="translate(-76.875000, -57.000000)" id="#333333">
                                 <polygon points="0 0 169 0 169 130 0 130"></polygon>

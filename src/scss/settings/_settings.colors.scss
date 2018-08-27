@@ -1,0 +1,41 @@
+///*----------------------------------*\
+//  #COLORS
+//\*----------------------------------*/
+
+$color-brand-primary:                    #FFD93E !default;
+
+$color-brand-secondary:                  #F7F7F7  !default;
+$color-brand-secondary-shadow:           #F2F1F0   !default;
+
+$color-grey:                             #858585 !default;
+$color-grey-light:                       #F0F0F0 !default;
+$color-grey-dark:                        #333 !default;
+$color-white:                            #fff !default;
+
+
+
+
+$color-page-text:                         $color-grey-dark;
+$color-page-background:                   $color-white;
+
+$color-page-head-background:              $color-white;
+$color-page-head-btn-background:          inherit;
+$color-page-head-menu-background:         $color-brand-secondary-shadow;
+$color-page-head-border:                  $color-grey-light;
+
+$color-links:                             inherit;
+
+$color-panel-status:                      $color-grey;
+$color-panel-weather-title:               $color-grey;
+
+$color-panel-background:                  $color-brand-secondary;
+$color-panel-background-hover:            $color-white;
+$color-panel-shadow-hover:                rgba(197,186,186,0.50);
+
+$color-nav-filter-background:             $color-brand-secondary-shadow;
+$color-nav-filter-item-background:        $color-brand-secondary;
+$color-nav-filter-item-active-background: $color-brand-primary;
+$color-nav-filter-item-background-hover:  $color-brand-secondary-shadow;
+
+$color-page-foot:                         $color-grey;
+$color-page-foot-hover:                   $color-grey-dark;

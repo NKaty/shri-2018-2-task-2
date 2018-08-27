@@ -1,0 +1,17 @@
+///*----------------------------------*\
+//  #GLOBAL
+//\*----------------------------------*/
+
+$global-font-size:    14px !default;
+$global-line-height:  20px !default;
+
+
+$global-radius:       20px !default;
+
+
+$global-spacing-unit:        round($global-line-height); //20
+$global-spacing-unit-tiny:   round($global-spacing-unit / 2); //10
+$global-spacing-unit-small:  15px;
+$global-spacing-unit-middle: 25px;
+$global-spacing-unit-large:  round($global-spacing-unit / 2 * 3); //30
+$global-spacing-unit-huge:   round($global-spacing-unit * 2); //40

@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  #PAGE-GRID
+\*------------------------------------*/
+
+.c-page-grid {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.c-page-grid__head {
+  grid-column: 1 / -1;
+}
+
+.c-page-grid__content {
+  grid-column: 1 / -1;
+}
+
+.c-page-grid__foot {
+  grid-column: 1 / -1;
+}

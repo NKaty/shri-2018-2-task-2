@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+a {
+  color: $color-links;
+  text-decoration: none;
+
+  @include hocus() {
+    text-decoration: none;
+  }
+
+}

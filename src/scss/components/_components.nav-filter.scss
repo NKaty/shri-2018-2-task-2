@@ -1,0 +1,55 @@
+/*------------------------------------*\
+  #NAV-FILTER
+\*------------------------------------*/
+
+.c-nav-filter__menu {
+  @include mq($until: mobile) {
+    background-color: $color-page-head-menu-background;
+    border-radius: $global-radius;
+    padding: $global-spacing-unit-small 0;
+  }
+}
+
+.c-nav-filter__btn {
+  background-color: $color-nav-filter-item-background;
+
+  &.is-active {
+    background-color: $color-nav-filter-item-active-background;
+  }
+}
+
+.c-nav-filter__item {
+  padding: 5px $global-spacing-unit-small;
+  margin-left: $global-spacing-unit-tiny;
+  background-color: $color-nav-filter-item-background;
+  border-radius: $global-radius;
+  @include font-size(13px);
+  @include font-weight(bold);
+  cursor: pointer;
+  @include hocus() {
+    background-color: $color-nav-filter-item-background-hover;
+  }
+  @include mq($until: mobile) {
+    padding-left: $global-spacing-unit-large;
+    padding-right: $global-spacing-unit-large;
+    margin-left: 0;
+    border-radius: 0;
+    background-color: $color-nav-filter-background;
+
+    &:first-of-type {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    background-color: $color-nav-filter-item-active-background;
+    cursor: default;
+  }
+}
+
+.c-nav-filter__dropdown {
+  .c-nav-filter.is-dropdown & {
+    transform: rotateX(180deg);
+    padding-top: 2px;
+  }
+}

@@ -1,0 +1,12 @@
+/*------------------------------------*\
+  #WRAPPER
+\*------------------------------------*/
+
+.o-wrapper {
+  padding-right: $global-spacing-unit-huge;
+  padding-left: $global-spacing-unit-huge;
+  @include mq($until: mobile) {
+    padding-right: $global-spacing-unit;
+    padding-left: $global-spacing-unit;
+  }
+}

@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  #IMAGES
+\*------------------------------------*/
+
+img {
+  max-width: 100%;
+  font-style: italic;
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}

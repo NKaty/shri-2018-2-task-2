@@ -1,7 +1,85 @@
-.red {
-    height: 400px;
-    width: 400px;
-    background: url(../assets/icon_temperature_2@2x.png) repeat;
-    border: 1px solid red;
-    display: flex;
-}
+///*------------------------------------*\
+//  #MAIN
+//\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * All..................Global variables and colors
+ *
+ * TOOLS
+ * All..................Global functions and mixins
+ *
+ * GENERIC
+ * Box-sizing...........Default `box-sizing`.
+ * Normalize.css........Normalize.css v8.0.0
+ * Reset................Reset to remove margins.
+ *
+ * ELEMENTS
+ * Page.................Page-level styles (HTML element, body).
+ * Headings.............Heading styles.
+ * Links................Hyperlink styles.
+ * Images...............Base image styles.
+ *
+ * OBJECTS
+ * Wrapper..............Wrappers.
+ * List-inline..........Simple abstraction for setting lists out in a line.
+ *
+ * COMPONENTS
+ * Page.................Full page styles.
+ * Page grid............Page layout.
+ * Page head............Page header styles.
+ * Nav primary..........Main nav styles.
+ * Nav secondary........Secondary nav styles.
+ * Nav filter...........Filter nav styles.
+ * Nav transformer......Nav turn into dropdown menu.
+ * Page content.........Main content styles.
+ * Page content grid....Main content layout.
+ * Main panel...........Main panel with status information.
+ * Headline.............Sections headline styles.
+ * Weather table........Weather box styles.
+ * Slider...............Styles for all sliders.
+ * Panel................Scripts, devices panels styles.
+ * Page foot............Page footer styles.
+ * Buttons..............Button styles.
+ *
+ * UTILITIES
+ * Headings.............Reassigning heading styles to helper classes.
+ */
+
+
+@import "settings/all";
+
+@import "tools/all";
+
+@import "generic/generic.box-sizing";
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+
+@import "elements/elements.page";
+@import "elements/elements.headings";
+@import "elements/elements.links";
+@import "elements/elements.images";
+
+@import "objects/objects.wrapper";
+@import "objects/objects.list-inline";
+
+@import "components/components.page";
+@import "components/components.page-grid";
+@import "components/components.page-head";
+@import "components/components.nav-primary";
+@import "components/components.nav-secondary";
+@import "components/components.nav-filter";
+@import "components/components.nav-transformer";
+@import "components/components.page-content";
+@import "components/components.page-content-grid";
+@import "components/components.main-panel";
+@import "components/components.headline";
+@import "components/components.weather-table";
+@import "components/components.slider";
+@import "components/components.panel";
+@import "components/components.page-foot";
+@import "components/components.buttons";
+
+@import "utilities/utilities.headings";

@@ -1,0 +1,35 @@
+/*------------------------------------*\
+  #NAV-TRANSFORMER
+\*------------------------------------*/
+
+.c-nav-transformer {
+  position: relative;
+  &.is-dropdown {
+    .c-nav-transformer__menu {
+      @include mq($until: mobile) {
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+        top: 32px;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.c-nav-transformer__menu {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  @include mq($until: mobile) {
+    display: none;
+  }
+}
+
+.c-nav-transformer__btn {
+  @include mq($from: mobile) {
+    display: none !important;
+  }
+}

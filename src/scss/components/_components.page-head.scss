@@ -1,0 +1,44 @@
+///*------------------------------------*\
+//  #PAGE-HEAD
+//\*------------------------------------*/
+
+.c-page-head {
+  display: flex;
+  @include font-size(16px);
+  @include font-weight(bold);
+  padding-top: $global-spacing-unit-large;
+  padding-bottom: $global-spacing-unit-large;
+  margin-bottom: $global-spacing-unit-large;
+  background-color: $color-page-head-background;
+  border-bottom: 1px solid $color-page-head-border;
+  @include mq($until: mobile) {
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit;
+    border: none;
+    &.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      backface-visibility: hidden;
+    }
+  }
+}
+
+.c-page-head__logo {
+  display: block;
+  width: 108px;
+  height: $logo-height;
+  line-height: 0;
+  margin-right: $global-spacing-unit-huge;
+}
+
+.c-page-head__nav {
+  line-height: $logo-height + 4px; //4px на выравнивание пустого пространства под картинкой
+  @include mq($until: mobile) {
+    line-height: $logo-height;
+  }
+}

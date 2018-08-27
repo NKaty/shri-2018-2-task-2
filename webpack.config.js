@@ -2,10 +2,10 @@ const PUBLIC_PATH = require('path').join(__dirname, 'public');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/js/index.js',
   output: {
     path: PUBLIC_PATH,
     filename: 'index.js'
@@ -13,7 +13,6 @@ module.exports = {
   devServer: {
     contentBase: PUBLIC_PATH,
     compress: true,
-    // open: true,
     port: 3000
   },
   module: {
@@ -22,8 +21,8 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-          options: { presets: ["env"] }
+          loader: 'babel-loader',
+          options: {presets: ['env']}
         }
       },
       {
@@ -37,7 +36,7 @@ module.exports = {
             {
               loader: 'postcss-loader',
               options: {
-                plugins() {
+                plugins () {
                   return [autoprefixer('last 2 version')];
                 }
               }
@@ -53,7 +52,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: "./img/[name].[hash].[ext]"
+            name: './img/[name].[hash].[ext]'
           }
         }
       },
@@ -62,17 +61,21 @@ module.exports = {
         use: [
           'file-loader'
         ]
-      },
+      }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin('dist', {} ),
     new ExtractTextPlugin({filename: 'style.css'}),
     new HtmlWebpackPlugin({
       hash: true,
       inject: 'body',
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
     })
   ]
-}
+};

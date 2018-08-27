@@ -1,0 +1,28 @@
+///*----------------------------------*\
+//  #TYPOGRAPHY
+//\*----------------------------------*/
+
+@mixin font-family($family) {
+  @if ($family == "Arial") {
+    font-family: Arial, sans-serif, serif;
+  }
+}
+
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: $font-size;
+  font-size: ($font-size / $global-font-size) * 1rem;
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);
+  } @else {
+    line-height: $line-height;
+  }
+}
+
+@mixin font-weight($weight) {
+  @if ($weight == normal) {
+    font-weight: 400;
+  } @else if ($weight == bold) {
+    font-weight: 700;
+  }
+}

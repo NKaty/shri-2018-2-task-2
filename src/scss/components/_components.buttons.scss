@@ -1,0 +1,55 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+.c-btn {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+
+  @include hocus() {
+    text-decoration: none;
+  }
+}
+
+.c-btn__icon {
+  display: flex;
+  align-items: center;
+}
+
+.c-btn--pagination {
+  padding: 0 $global-spacing-unit-tiny;
+  opacity: 0.2;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+.c-btn--right {
+  transform: rotateY(180deg);
+}
+
+.c-btn--toggle {
+  height: 100%;
+  background-color: $color-page-head-btn-background;
+  border: none;
+}
+
+.c-btn--split {
+  display: flex;
+  border-radius: $global-radius;
+  @include font-size(13px);
+  @include font-weight(bold);
+
+  .c-btn__action {
+    padding: 5px 3px 5px 17px;
+  }
+
+  .c-btn__dropdown {
+    padding: 5px 17px 5px 3px;
+  }
+}

@@ -1,0 +1,51 @@
+///*------------------------------------*\
+//  #WEATHER-TABLE
+//\*------------------------------------*/
+
+.c-weather-table {
+  display: table;
+}
+
+.c-weather-table__title {
+  color: $color-panel-weather-title;
+}
+
+.c-weather-table__value {
+  @include font-size(36px);
+  @include font-weight(bold);
+
+  img {
+    height: 26px;
+    width: 26px;
+    @include mq($until: mobile) {
+      height: 21px;
+      width: 21px;
+      vertical-align: middle;
+    }
+  }
+
+  @include mq($until: mobile) {
+    @include font-size(24px, 1.4);
+  }
+}
+
+.c-weather-table__title,
+.c-weather-table__value {
+  display: table-row;
+
+  > p,
+  > picture {
+    display: table-cell;
+  }
+
+  > p:first-child {
+    padding-right: 18px;
+  }
+
+  > p:nth-child(2) {
+    padding-right: 5px;
+    @include mq($until: mobile) {
+      padding-right: 0;
+    }
+  }
+}
